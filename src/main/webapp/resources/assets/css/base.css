@@ -1031,8 +1031,6 @@
 
 .container {
     width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1125,6 +1123,7 @@ a.btn {
     padding-top: 0.0625rem;
     padding-bottom: 0.0625rem;
     margin-right: 1rem;
+    margin-left: 1rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
