@@ -1043,6 +1043,14 @@
   
 }
 
+.aside {
+  width: 15%;
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
 
 /* button */
 .btn {
@@ -1124,10 +1132,12 @@ a.btn {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1rem;
+  width: 100%;
 }
 
 .navbar>.container,
 .navbar>.container-fluid {
+  
   display: flex;
   flex-wrap: wrap;
   align-items: center;
