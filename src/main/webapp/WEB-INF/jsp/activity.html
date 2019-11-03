@@ -1,50 +1,133 @@
 <!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%> -->
 
-    <!DOCTYPE html>
-    <html>
-    
-    <head>
-        <title>TAVE</title>
-        <meta charset="UTF-8">
-    
-        <!-- CSS FILE -->
-        <!-- 전체 공통: base.css  /  해당 페이지: 페이지이름.css -->
-        <link rel="stylesheet" href="../../resources/assets/css/base.css">
-        <link rel="stylesheet" href="../../resources/assets/css/index.css">
-    
-    </head>
-    
-    <body>
-        <div class="container">
-            <!-- navbar -->
-            <nav class="navbar">
-                <div class="container">
-                    <!-- logo -->
-                    <a class="navbar-brand col-1 mr-auto ml-auto" href="index.html">
-                        <img class="navbar-brand-img mt-2 ml-1" src="../../resources/assets/img/2.jpg">
-                    </a>
-                    <!-- menu -->
-                    <div class="container nav-menu col-7">
-                        <a href="about.html" class="btn mr-5 ">ABOUT</a>
-                        <a href="recruit.html" class="btn mr-5 ml-5">RECRUIT</a>
-                        <a href="activity.html" class="btn mr-5 ml-5">ACTIVITY</a>
-                        <a href="qna.html" class="btn ml-5">Q&A</a>
-                    </div>
-                    <!-- 페북, 블로그 아이콘 -->
-                    <div>                 
-                    </div>
-                </div>
-            </nav>
-            <!-- content -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TAVE</title>
+    <meta charset="UTF-8">
+
+    <!-- CSS FILE -->
+    <!-- 전체 공통: base.css  /  해당 페이지: 페이지이름.css -->
+    <link rel="stylesheet" href="../../resources/assets/css/base.css">
+    <link rel="stylesheet" href="../../resources/assets/css/index.css">
+    <link rel="stylesheet" href="../../resources/assets/css/activity.css">
+    <link rel="stylesheet" type=text/css href="../../resources/assets/css/sidebar.css">
+    <script src="../../resources/assets/js/jquery-3.3.1.js"></script>
+    <script src="../../resources/assets/js/motion.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <nav class="navbar">
             <div class="container">
-                <div class="main">
-                    <p class="lg-title">ACTIVITY</p>
-                    <P class="lg-subtitle">활동 사진!</P>
+                <!-- logo -->
+                <a class="navbar-brand col-1 mr-auto ml-auto" href="index.html">
+                    <img class="navbar-brand-img mt-2 ml-1" src="../../resources/assets/img/2.jpg">
+                </a>
+                <!-- menu -->
+                <div class="container nav-menu col-7">
+                    <a href="about.html" class="btn mr-5 ">ABOUT</a>
+                    <a href="recruit.html" class="btn mr-5 ml-5">RECRUIT</a>
+                    <a href="activity.html" class="btn mr-5 ml-5">ACTIVITY</a>
+                    <a href="qna.html" class="btn ml-5">Q&A</a>
+                </div>
+                <!-- 페북, 블로그 아이콘 -->
+                <div>
                 </div>
             </div>
+        </nav>
+        <!-- content -->
+        <div class="container">
+            <div class="main">
+                <p class="lg-title">ACTIVITY</p>
+                <P class="lg-subtitle">활동 사진!</P>
+                
+            </div>
+        </div>
+
+        <!-- sidebar-->
+        <div class="container">
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <h3><a href="#">ABOUT</a></h3>
+                        <ul>
+                            <li><a href="#">TAVE 소개</a></li>
+                            <li><a href="#">운영진 소개</a></li>
+                            <li><a href="#">TAVE 연혁</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">RECRUIT</a></h3>
+                        <ul>
+                            <li><a href="#">지원하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">ACTIVITY</a></h3>
+                        <ul>
+                            <li><a href="#">활동사진</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">Q&A</a></h3>
+                        <ul>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     
-    </body>
+        <!-- activity content-->
+
+        <div class="gallerymain" id="gallerymain">
+
+            <div class="gallery">
+                <a target="_blank" herf="../../resources/assets/img/2.jpg">
+                    <img src="../../resources/assets/img/2.jpg" alt="설명" width="250" height="20">
+                </a>
+                <div class="desc"><h1>WORKSHOP & OT</h1> </div>
+            </div>
     
-    </html>
+            <div class="gallery">
+                <a target="_blank" herf="../../resources/assets/img/2.jpg"> <img src="../../resources/assets/img/2.jpg"
+                        alt="설명" width="300" height="200">
+                </a>
+                <div class="desc"><h1>정기세션</h1>  </div>
+            </div>
+    
+            <div class="gallery">
+                <a target="_blank" herf="../../resources/assets/img/2.jpg"> <img src="../../resources/assets/img/2.jpg"
+                        alt="설명" width="300" height="200">
+                </a>
+                <div class="desc"><h1>테마피크닉</h1>  </div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" herf="../../resources/assets/img/2.jpg"> <img src="../../resources/assets/img/2.jpg"
+                        alt="설명" width="300" height="200">
+                </a>
+                <div class="desc"><h1>뒷풀이</h1>  </div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" herf="../../resources/assets/img/2.jpg"> <img src="../../resources/assets/img/2.jpg"
+                        alt="설명" width="300" height="200">
+                </a>
+                <div class="desc"><h1>컨퍼런스</h1>  </div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+
+</body>
+
+</html>
