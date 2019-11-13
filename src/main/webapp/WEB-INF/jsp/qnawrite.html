@@ -1,6 +1,5 @@
 <!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> -->
-<!-- <%@ page import = "java.sql.*"%> -->
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +12,8 @@
     <!-- 전체 공통: base.css  /  해당 페이지: 페이지이름.css -->
     <link rel="stylesheet" href="../../resources/assets/css/base.css">
     <link rel="stylesheet" href="../../resources/assets/css/index.css">
-    <link rel="stylesheet" href="../../resources/assets/css/qna.css">
+    <link rel="stylesheet" href="../../resources/assets/css/recruit.css">
+    <link rel="stylesheet" type=text/css href="../../resources/assets/css/sidebar.css">
 
     <!-- Icon -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,8 +29,18 @@
             vertical-align: middle;
             widows: 100%;
         }
+
+        /* table box */
+        .tablebox {
+            width: 65%;
+            margin: 2rem auto 3rem;
+            background-color: #ffffff;
+            box-shadow: 0 0 2rem 0 rgba(116, 133, 153, 0.15);
+            border-radius: 2%;
+            padding: 4rem;
+        }
     </style>
-    
+
 </head>
 
 <body>
@@ -84,91 +94,57 @@
         </nav>
 
         <!-- content -->
-        <!-- DB 연결
-            <%
-	            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-	            String url = "jdbc:odbc:board2";
-	            String id = "";
-	            String pass = "";
-	            int total = 0;
-	
-	            try {
-		            Connection conn = DriverManager.getConnection(url,id,pass);
-		            Statement stmt = conn.createStatement();
-
-		            String sqlCount = "SELECT COUNT(*) FROM board";
-		            ResultSet rs = stmt.executeQuery(sqlCount);
-		
-		            if(rs.next()){
-			            total = rs.getInt(1);
-		            }
-		            rs.close();
-		            out.print("총 게시물 : " + total + "개");
-		
-		            String sqlList = "SELECT NUM, USERNAME, TITLE, TIME from board order by NUM DESC";
-		            rs = stmt.executeQuery(sqlList);
-		
-            %>  -->
-
         <div class="container">
             <div class="tablebox">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>no.</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>작성일</th>
-                        </tr>
-                    </thead>
-                    <!-- 글이 등록되지 않았을 때
-                    <%
-	                    if(total==0) {
-                    %> -->
-                    <tbody>
-                        <tr>
-                            <td colspan="4">등록된 글이 없습니다.</td>
-                        </tr>
-                    </tbody>
-                    <!-- 
-                    <%
-	 	            } else {
-	 		
-		            while(rs.next()) {
-			            int idx = rs.getInt(1);
-			            String name = rs.getString(2);
-			            String title = rs.getString(3);
-			            String time = rs.getString(4);
-                    %> -->
-                    <tbody>
-                        <tr>
-                            <td><%=idx %></td>
-                            <td><%=title %></td>
-                            <td><%=name %></td>
-                            <td><%=time %></td>
-                        </tr>
-                    </tbody>
-                    <!-- DB 연결 종료
-                    <% 
-		                        }
-	                    } 
-	                        rs.close();
-	                        stmt.close();
-	                        conn.close();
-                        } catch(SQLException e) {
-	                    out.println( e.toString() );
-                    }
-                    %> -->
-
-                </table>
-
-                <div style="text-align: center;">
-                    <a href="qnawrite.html" class="btn btn-fill w-text mt-6">글쓰기</a>
+                <div>
+                    <h2 style="text-align: center;"><b>글쓰기</b></h2>
                 </div>
 
+                <div class="mt-6">
+                    <form role="form" name="formQNA" method="POST" action="/writeQ">
+
+                        <h4 class="ml-2 rec-sub">제목</h4>
+                        <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                                <input class="form-control" type="text" placeholder="title" name="questiontitle" id="questiontitle"
+                                    required>
+                            </div>
+                        </div>
+
+                        <h4 class="ml-2 rec-sub">작성자</h4>
+                        <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                                <input class="form-control" type="text" placeholder="nickname" name="nick" id="nick"
+                                    required>
+                            </div>
+                        </div>
+
+                        <h4 class="ml-2 rec-sub">내용</h4>
+                        <div class="form-group">
+                            <textarea rows="3" class="form-control form-control-alternative"
+                                placeholder="A few words about you ..."></textarea>
+                        </div>
+
+                        <h4 class="ml-2 rec-sub">비밀번호</h4>
+                        <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                                <input class="form-control" type="text" placeholder="password" name="questionPW" id="questionPW"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button class="btn btn-fill mt-6" type="submit" onclick="location='qna.html'">저장</button>
+                            <button class="btn btn-fill mt-6" onclick="location='qna.html'">취소</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
+
     </div>
+
 </body>
 
 </html>
