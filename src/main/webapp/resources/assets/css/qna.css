@@ -51,3 +51,7 @@ td {
   vertical-align: bottom;
   border-bottom: 2px solid #e9ecef;
 }
+
+.questionform td{
+  padding: 0 2rem;
+}

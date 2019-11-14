@@ -86,14 +86,14 @@
         <!-- content -->
         <!-- DB 연결
             <%
-	            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-	            String url = "jdbc:odbc:board2";
-	            String id = "";
-	            String pass = "";
+	            Class.forName("com.mysql.cj.jdbc.Driver");
+	            String url = "jdbc:mysql://127.0.0.1:3306/tave?characterEncoding=utf8&serverTimezone=UTC";
+	            String username = "tave";
+	            String password = "tave";
 	            int total = 0;
 	
 	            try {
-		            Connection conn = DriverManager.getConnection(url,id,pass);
+		            Connection conn = DriverManager.getConnection(url,username,password);
 		            Statement stmt = conn.createStatement();
 
 		            String sqlCount = "SELECT COUNT(*) FROM board";
