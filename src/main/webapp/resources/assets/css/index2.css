@@ -83,23 +83,23 @@ body, html {
 
  /* section */
  .section1 {
-    background-color: #7DBCD4;
+    background-image: url(../img/wave.png);
 }
 
 .section2 {
-    background-color: #98C19F; 
-}
+   background-image: url(../img/t.png);
+} 
 
 .section3 {
-    background-color:  #A199E2;
+   background-image: url(../img/a.png);
 }
 
 .section4 {
-    background-color:  #CC938E;
+   background-image: url(../img/v.png);
 }
 
 .section5 {
-    background-color:  #D2C598;
+   background-image: url(../img/e.png);
 }
         
 section div {
