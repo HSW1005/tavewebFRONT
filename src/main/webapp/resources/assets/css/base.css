@@ -1052,16 +1052,6 @@
   
 }
 
-.aside {
-  width: 15%;
-  float: left;
-  margin-right: auto;
-  margin-left: 10%;
-  margin-top : 10%;
-  
-}
-
-
 /* button */
 .btn {
   display: inline-block;
@@ -1138,7 +1128,7 @@ a.btn {
 .navbar {
   
   z-index: 1;
-  position: relative;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
