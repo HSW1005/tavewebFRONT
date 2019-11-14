@@ -1041,6 +1041,8 @@
   height: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-top : 0px;
+  padding-top : 0px
   
 }
 .container {
@@ -1134,12 +1136,14 @@ a.btn {
 
 /* navbar */
 .navbar {
+  
+  z-index: 1;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 0rem 0rem;
   width: 100%;
 }
 
