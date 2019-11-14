@@ -19,6 +19,8 @@
         * @type {Array}
         */
        var sections = main.getElementsByTagName('section');
+
+       
        
        /**
         * Full page scroll configurations
