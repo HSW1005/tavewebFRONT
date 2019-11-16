@@ -83,35 +83,10 @@
         </nav>
 
         <!-- content -->
-        <!-- DB 연결
-            <%
-	            Class.forName("com.mysql.cj.jdbc.Driver");
-	            String url = "jdbc:mysql://127.0.0.1:3306/tave?characterEncoding=utf8&serverTimezone=UTC";
-	            String username = "tave";
-	            String password = "tave";
-	            int total = 0;
-	
-	            try {
-		            Connection conn = DriverManager.getConnection(url,username,password);
-		            Statement stmt = conn.createStatement();
-
-		            String sqlCount = "SELECT COUNT(*) FROM board";
-		            ResultSet rs = stmt.executeQuery(sqlCount);
-		
-		            if(rs.next()){
-			            total = rs.getInt(1);
-		            }
-		            rs.close();
-		            out.print("총 게시물 : " + total + "개");
-		
-		            String sqlList = "SELECT NUM, USERNAME, TITLE, TIME from board order by NUM DESC";
-		            rs = stmt.executeQuery(sqlList);
-		
-            %>  -->
-
         <div class="container">
             <div class="tablebox">
                 <table class="table">
+
                     <thead>
                         <tr>
                             <th>no.</th>
@@ -120,49 +95,26 @@
                             <th>작성일</th>
                         </tr>
                     </thead>
-                    <!-- 글이 등록되지 않았을 때
-                    <%
-	                    if(total==0) {
-                    %> -->
+                    
                     <tbody>
                         <tr>
-                            <td colspan="4">등록된 글이 없습니다.</td>
+                            <td>1</td>
+                            <td>공지사항!</td>
+                            <td>운영진</td>
+                            <td>2019-11-15</td>
                         </tr>
-                    </tbody>
-                    <!-- 
-                    <%
-	 	            } else {
-	 		
-		            while(rs.next()) {
-			            int idx = rs.getInt(1);
-			            String name = rs.getString(2);
-			            String title = rs.getString(3);
-			            String time = rs.getString(4);
-                    %> -->
-                    <tbody>
                         <tr>
-                            <td><%=idx %></td>
-                            <td><%=title %></td>
-                            <td><%=name %></td>
-                            <td><%=time %></td>
+                            <td>2</td>
+                            <td>자주 묻는 사항</td>
+                            <td>운영진</td>
+                            <td>2019-11-15</td>
                         </tr>
                     </tbody>
-                    <!-- DB 연결 종료
-                    <% 
-		                        }
-	                    } 
-	                        rs.close();
-	                        stmt.close();
-	                        conn.close();
-                        } catch(SQLException e) {
-	                    out.println( e.toString() );
-                    }
-                    %> -->
 
                 </table>
 
                 <div style="text-align: center;">
-                    <a href="qnawrite.html" class="btn btn-fill w-text mt-6">글쓰기</a>
+                    <a href="qnawrite.html" class="btn btn-fill mt-6">글쓰기</a>
                 </div>
 
             </div>

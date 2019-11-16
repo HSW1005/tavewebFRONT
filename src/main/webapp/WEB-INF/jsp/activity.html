@@ -14,9 +14,88 @@
     <link rel="stylesheet" href="../../resources/assets/css/index.css">
     <link rel="stylesheet" href="../../resources/assets/css/activity.css">
     <link rel="stylesheet" type=text/css href="../../resources/assets/css/sidebar.css">
-    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="../../resources/assets/js/motion.js"></script>
 
+    <style>
+        *,
+        *:after,
+        *:before {
+            padding: 0;
+            margin: 0;
+            font-family: NanumSquareRound;
+        }
+
+
+        ul {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            list-style: none;
+            width: 955px;
+            height: 450px;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px 1px;
+        }
+
+
+        li {
+            position: relative;
+            width: 190px;
+            height: 450px;
+            float: left;
+            border-left: 1px solid white;
+            -webkit-transition: all 0.7s;
+            -moz-transition: all 0.7s;
+            transition: all 0.7s;
+            box-shadow: -2px 0 10px 2px;
+        }
+
+        ul li:first-child {
+            border: none;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            color: white;
+            white-space: nowrap;
+            padding: 20px;
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+            /* IE10+ */
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=1);
+            /* IE6-9 */
+
+        }
+
+        .ac-photo {
+            width: 800px;
+            height: 450px;
+        }
+
+        ul:hover li {
+            width: 50px;
+        }
+
+
+        ul li:hover {
+            width: 750px;
+        }
+    </style>
 
 </head>
 
@@ -44,99 +123,37 @@
 
 
         <!-- content -->
+        <ul>
+            <li>
+                <span>MT&OT</span>
+                <img class="ac-photo" src="../../resources/assets/img/OT.jpg" />
+            </li>
 
-        
-        <!-- sidebar-->
-        <div class="aside">
+            <li>
+                <span>정기세션</span>
+                <img class="ac-photo" src="../../resources/assets/img/정기세션.jpg" />
+            </li>
 
+            <li>
+                <span>테마피크닉</span>
+                <img class="ac-photo" src="../../resources/assets/img/테마피크닉.jpg" />
+            </li>
 
-            <div class="container">
-                <nav>
-                    <ul class="gnb">
-                        <li>
-                            <h3><a href="#">ABOUT</a></h3>
-                            <ul>
-                                <li><a href="#">TAVE 소개</a></li>
-                                <li><a href="#">운영진 소개</a></li>
-                                <li><a href="#">TAVE 연혁</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3><a href="#">RECRUIT</a></h3>
-                            <ul>
-                                <li><a href="#">지원하기</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3><a href="#">ACTIVITY</a></h3>
-                            <ul>
-                                <li><a href="#">활동사진</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3><a href="#">Q&A</a></h3>
-                            <ul>
-                                <li><a href="#">자주 묻는 질문</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+            <li>
+                <span>뒷풀이</span>
+                <img class="ac-photo" src="../../resources/assets/img/뒤풀이.jpg" />
+            </li>
 
-        <!-- activity content-->
-
-        <div class="gallerymain" id="gallerymain">
-
-            <div class="gallery">
-                <a target="_blank" herf="">
-                    <img src="../../resources/assets/img/OT.jpg" alt="설명" width="250" height="20">
-                </a>
-                <div class="desc">
-                    <h2>MT & OT</h2>
-                </div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" herf=""> <img src="../../resources/assets/img/정기세션.jpg"
-                        alt="설명" width="300" height="200">
-                </a>
-                <div class="desc">
-                    <h2>정기세션</h2>
-                </div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" herf=""> <img src="../../resources/assets/img/테마피크닉.jpg"
-                        alt="설명" width="300" height="200">
-                </a>
-                <div class="desc">
-                    <h2>테마피크닉</h2>
-                </div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" herf=""> <img src="../../resources/assets/img/뒤풀이.jpg"
-                        alt="설명" width="300" height="200">
-                </a>
-                <div class="desc">
-                    <h2>뒷풀이</h2>
-                </div>
-            </div>
-
-            <div class="gallery">
-                <a target="_blank" herf=""> <img src="../../resources/assets/img/컨퍼런스.jpg"
-                        alt="설명" width="300" height="200">
-                </a>
-                <div class="desc">
-                    <h2>컨퍼런스</h2>
-                </div>
-            </div>
-        </div>
-
+            <li>
+                <span>컨퍼런스</span>
+                <img class="ac-photo" src="../../resources/assets/img/컨퍼런스.jpg" />
+            </li>
+        </ul>
 
     </div>
 
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="../../resources/assets/js/motion.js"></script>
 
 </body>
 

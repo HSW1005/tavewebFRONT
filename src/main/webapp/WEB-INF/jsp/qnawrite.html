@@ -32,6 +32,14 @@
             widows: 100%;
         }
 
+        .firstcol {
+            padding: 0 2rem;
+        }
+
+        .secondcol {
+            width: 198;
+        }
+
     </style>
 
 </head>
@@ -94,17 +102,17 @@
                 </div>
 
                 <div class="mt-6">
-                    <table class="questionform ml-auto mr-auto">
+                    <table class="ml-auto mr-auto">
                         <form role="form" name="formQNA" method="POST" action="/writeQ">
 
                             <tr>
-                                <td>
+                                <td class="firstcol">
                                     <h4 class="rec-sub">제목</h4>
                                 </td>
-                                <td>
+                                <td class="secondcol">
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative">
-                                            <input class="form-control" type="text" placeholder="title"
+                                            <input class="form-control secondcol" type="text" placeholder="title"
                                                 name="questiontitle" id="questiontitle" required>
                                         </div>
                                     </div>
