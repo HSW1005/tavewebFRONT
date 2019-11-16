@@ -1114,7 +1114,7 @@
 }
 
 a.btn {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -1139,11 +1139,16 @@ a.btn {
 
 .navbar>.container,
 .navbar>.container-fluid {
-  
+  width: 100%;
+  margin-right: auto;
+  margin-left:  auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  
 }
 
 .navbar-brand-img {
@@ -1164,4 +1169,12 @@ a.btn {
 .nav-text {
   list-style: none;
   display: flex;
+}
+
+
+/*seil 사용*/
+
+.seil-col {
+  padding-right: 15px;
+  padding-left: 15px;
 }
