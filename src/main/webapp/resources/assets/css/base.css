@@ -1148,6 +1148,8 @@ a.btn {
   justify-content: space-between;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
+
+  
   
 }
 
@@ -1174,7 +1176,19 @@ a.btn {
 
 /*seil 사용*/
 
-.seil-col {
-  padding-right: 15px;
-  padding-left: 15px;
+a.logobtn:visited
+{
+ text-decoration: none; color: white;
+  
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: NanumSquareRound;
 }
