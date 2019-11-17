@@ -1114,7 +1114,7 @@
 }
 
 a.btn {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -1139,11 +1139,18 @@ a.btn {
 
 .navbar>.container,
 .navbar>.container-fluid {
-  
+  width: 100%;
+  margin-right: auto;
+  margin-left:  auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+
+  
+  
 }
 
 .navbar-brand-img {
@@ -1164,4 +1171,24 @@ a.btn {
 .nav-text {
   list-style: none;
   display: flex;
+}
+
+
+/*seil 사용*/
+
+a.logobtn:visited
+{
+ text-decoration: none; color: white;
+  
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: NanumSquareRound;
 }
