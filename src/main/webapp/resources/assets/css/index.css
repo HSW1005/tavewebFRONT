@@ -109,22 +109,32 @@ body, html {
  /* section */
  .section1 {
     background-image: url(../img/wave.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .section2 {
    background-image: url(../img/t.png);
+   background-repeat: no-repeat;
+   background-size: 100%;
 } 
 
 .section3 {
    background-image: url(../img/a.png);
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
 
 .section4 {
    background-image: url(../img/v.png);
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
 
 .section5 {
    background-image: url(../img/e.png);
+   background-repeat: no-repeat;
+   background-size: 100%;
 }
         
 section div {

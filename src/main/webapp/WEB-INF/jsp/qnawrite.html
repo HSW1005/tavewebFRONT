@@ -9,38 +9,24 @@
     <meta charset="UTF-8">
 
     <!-- CSS FILE -->
-    <!-- 전체 공통: base.css  /  해당 페이지: 페이지이름.css -->
     <link rel="stylesheet" href="../../resources/assets/css/base.css">
     <link rel="stylesheet" href="../../resources/assets/css/index.css">
     <link rel="stylesheet" href="../../resources/assets/css/qna.css">
     <link rel="stylesheet" href="../../resources/assets/css/recruit.css">
     <link rel="stylesheet" href="../../resources/assets/css/materialize.min.css">
 
+    <!-- ICON -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+    <!-- JS -->
     <script src="../../resources/assets/js/dropdown.js"></script>
     <script src="../../resources/assets/js/pageScroll.js"></script>
     <script src="../../resources/assets/js/materialize.min.js"></script>
-
-    <style type="text/css"></style>
-
 
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="../../resources/assets/js/motion.js"></script>
 
     <style>
-        /* nav section style */
-        .divgroup {
-            text-align: center;
-        }
-
-        .divmiddle {
-            display: inline-block;
-            vertical-align: middle;
-            widows: 100%;
-        }
-
         .firstcol {
             padding: 0;
         }
@@ -48,44 +34,40 @@
 
 </head>
 
-<body>
-    <nav class="navbar_etc" style="background-color: gray;">
+<body style="overflow: auto;">
 
-        <div style="width:30%; float: left;  top:10px;">
-            <div class="container col-11">
-                <div style="align-items: center;  bottom:50%">
-                    <a href="index.html" style="align-content: left; font-size:40px; text-decoration: none; ">
-                        <img class="navbar-brand-img mt-2 " src="../../resources/assets/img/Libre.png"></a>
-                </div>
+    <!-- navbar -->
+    <nav class="navbar_etc">
+        <div class="container col-11">
+
+            <div style="align-items: center; line-height: 1px;">
+                <a href="index.html" class="logobtn ml-5"
+                    style="align-content: left; font-size:40px; text-decoration: none; vertical-align: middle;">
+                    <img class="navbar-brand-img" src="../../resources/assets/img/Libre.png"></a>
             </div>
-        </div>
-        <div style="width:50%; float: left;">
+
             <div class="nav-menu col-9" style="text-align:right; align-items: center;">
 
-                <a href="about.html" class="btn ml-5 ">ABOUT</a>
-                <a href=" recruit.html" class="btn ml-5">RECRUIT</a>
-                <a href=" activity.html" class="btn ml-5">ACTIVITY</a>
-                <a href=" qna.html" class="btn ml-5">Q&A</a>
+                <a href="about.html" class="btn ml-8">ABOUT</a>
+                <a href="recruit.html" class="btn ml-6">RECRUIT</a>
+                <a href="activity.html" class="btn ml-6">ACTIVITY</a>
+                <a href="qna.html" class="btn ml-6">Q&A</a>
+
+                <div class="container" style="align-items: center; line-height: 15px;">
+                    <a href=" http://fb.com/TechnologywaAVE" class="btn" style="font-size: 20px;">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="http://blog.naver.com/t--ave" class="btn" style="font-size: 20px;">
+                        <i class="fa fa-globe"></i>
+                    </a>
+                    <a href="http://fb.com/TechnologywaAVE" class="btn" style="font-size: 20px;">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </div>
+
             </div>
+
         </div>
-        <div style="width:20%; float: left;">
-            <div class=" container" style="float: right; vertical-align: middle;">
-                <a href=" http://fb.com/TechnologywaAVE" class="btn" style="font-size: 20px; ">
-                    <i class="fa fa-facebook-square"></i>
-                </a>
-
-
-                <a href="http://blog.naver.com/t--ave" class="btn" style="font-size: 20px; ">
-                    <i class="fa fa-globe"></i>
-                </a>
-
-
-                <a href="http://fb.com/TechnologywaAVE" class="btn" style="font-size: 20px; ">
-                    <i class="fa fa-comment"></i>
-                </a>
-            </div>
-        </div>
-
     </nav>
 
     <!-- content -->
@@ -96,7 +78,7 @@
             </div>
 
             <div class="mt-6">
-                <table class="ml-auto mr-auto" width="90%">
+                <table class="ml-auto mr-auto" width="85%">
                     <form role="form" name="formQNA" method="POST" action="/writeQ">
 
                         <tr>
@@ -135,7 +117,7 @@
                             <td class="secondcol">
                                 <div class="form-group" style="padding-right: 2rem;">
                                     <textarea rows="4" class="form-control form-control-alternative"
-                                        placeholder="A few words about you ..."></textarea>
+                                        placeholder="A few words about you ..." name="question" required></textarea>
                                 </div>
                             </td>
                         </tr>
