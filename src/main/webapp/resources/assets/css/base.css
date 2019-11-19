@@ -1147,7 +1147,7 @@ a.btn {
 }
 
 .navbar_etc a {
-  color: #010535;
+  
   font-weight: 570;
 }
 
@@ -1192,7 +1192,43 @@ a.btn {
 }
 
 
-/*seil 사용*/
+/*새로운 navbar기능들(btn2)*/
+.nav-menu .btn2:hover {
+  color: rgb(0, 0, 0); /*버튼 바뀌는 색상*/
+  text-decoration: none;
+  box-shadow: 0 0 0 0;
+  font-weight: bold;
+  
+  
+}
+
+a.btn2 {
+  color: rgb(128, 128, 128);  /*기존 btn 색깔*/
+  text-decoration: none;
+  transition-duration: 0.5s;  /*색상 천천히 바뀌는 이유 */
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
 
 a.logobtn:visited
 {
