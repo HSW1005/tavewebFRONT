@@ -73,82 +73,85 @@
     <!-- content -->
     <div class="container">
         <div class="tablebox">
-            <div>
-                <h2 style="text-align: center;"><b>글쓰기</b></h2>
+            <div class="border">
+
+                <div>
+                    <h2 style="text-align: center; font-weight: 800;">문의하기</h2>
+                </div>
+
+                <div class="mt-6">
+                    <table class="ml-auto mr-auto" width="75%">
+                        <form role="form" name="formQNA" method="POST" action="/write">
+
+                            <tr>
+                                <td class="firstcol">
+                                    <h4 class="rec-sub">제목</h4>
+                                </td>
+                                <td class="secondcol">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control secondcol" type="text" placeholder="title"
+                                                name="title" id="title" required>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="firstcol">
+                                    <h4 class="rec-sub">작성자</h4>
+                                </td>
+                                <td class="secondcol">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control" type="text" placeholder="writer" name="writer"
+                                                id="writer" required>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td class="firstcol">
+                                    <h4 class="rec-sub">내용</h4>
+                                </td>
+                                <td class="secondcol">
+                                    <div class="form-group" style="padding-right: 2rem;">
+                                        <textarea rows="4" class="form-control form-control-alternative"
+                                            placeholder="A few words about you ..." name="content" required></textarea>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="firstcol">
+                                    <h4 class="rec-sub">비밀번호</h4>
+                                </td>
+                                <td class="secondcol">
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <input class="form-control" type="text" placeholder="password"
+                                                name="password" id="password" required>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <div style="text-align: center;">
+                                        <button class="btn btn-fill mt-6" type="submit">저장</button>
+
+                        </form>
+
+                        <form role="form" method="GET" action="/qna" style="display: inline;">
+                            <button class="btn btn-fill mt-6" type="submit">취소</button>
+                        </form>
+                </div>
+
+                </table>
             </div>
-
-            <div class="mt-6">
-                <table class="ml-auto mr-auto" width="85%">
-                    <form role="form" name="formQNA" method="POST" action="/writeQ">
-
-                        <tr>
-                            <td class="firstcol">
-                                <h4 class="rec-sub">제목</h4>
-                            </td>
-                            <td class="secondcol">
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <input class="form-control secondcol" type="text" placeholder="title"
-                                            name="questiontitle" id="questiontitle" required>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="firstcol">
-                                <h4 class="rec-sub">작성자</h4>
-                            </td>
-                            <td class="secondcol">
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <input class="form-control" type="text" placeholder="nickname" name="nick"
-                                            id="nick" required>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="firstcol">
-                                <h4 class="rec-sub">내용</h4>
-                            </td>
-                            <td class="secondcol">
-                                <div class="form-group" style="padding-right: 2rem;">
-                                    <textarea rows="4" class="form-control form-control-alternative"
-                                        placeholder="A few words about you ..." name="question" required></textarea>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="firstcol">
-                                <h4 class="rec-sub">비밀번호</h4>
-                            </td>
-                            <td class="secondcol">
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <input class="form-control" type="text" placeholder="password" name="questionPW"
-                                            id="questionPW" required>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="2">
-                                <div style="text-align: center;">
-                                    <button class="btn btn-fill mt-6" type="submit">저장</button>
-
-                    </form>
-
-                    <form role="form" method="GET" action="/qna" style="display: inline;">
-                        <button class="btn btn-fill mt-6" type="submit">취소</button>
-                    </form>
-            </div>
-
-            </table>
         </div>
     </div>
 
