@@ -1116,11 +1116,49 @@
 }
 
 a.btn {
-  color: rgb(16, 36, 97);  /*기존 btn 색깔*/
+  color: rgb(255, 255, 255);  /*기존 btn 색깔*/
   text-decoration: none;
   transition-duration: 0.3s;  /*색상 천천히 바뀌는 이유 */
   font-weight: bold;
 
+}
+
+/*btn3 : for index*/
+a.btn3 {
+  color: rgb(0, 89, 255);  /*기존 btn 색깔*/
+  text-decoration: none;
+  transition-duration: 0.3s;  /*색상 천천히 바뀌는 이유 */
+  font-weight: bold;
+
+}
+
+.btn3 {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn3:hover {
+  color: rgb(0, 0, 0); /*버튼 바뀌는 색상*/
+  text-decoration: none;
+  box-shadow: 0 0 0 0;
+  font-weight: bold;
 }
 
 /* icon */
@@ -1199,7 +1237,7 @@ a.btn {
 
 /*seil 사용*/
 /*새로운 navbar기능들(btn2)*/
-.nav-menu .btn2:hover {
+.btn2:hover {
   color: rgb(0, 0, 0); /*버튼 바뀌는 색상*/
   text-decoration: none;
   box-shadow: 0 0 0 0;
@@ -1250,4 +1288,9 @@ a.logobtn:visited
 
 * {
   font-family: NanumSquareRound;
+}
+
+/* hide scroll bar */
+body::-webkit-scrollbar { 
+  display: none; 
 }
