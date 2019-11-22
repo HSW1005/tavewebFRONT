@@ -1125,7 +1125,7 @@ a.btn {
 
 /*btn3 : for index*/
 a.btn3 {
-  color: rgb(0, 89, 255);  /*기존 btn 색깔*/
+  color: #009EB3;  /*기존 btn 색깔*/
   text-decoration: none;
   transition-duration: 0.3s;  /*색상 천천히 바뀌는 이유 */
   font-weight: bold;
