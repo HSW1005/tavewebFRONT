@@ -1092,6 +1092,7 @@
   text-decoration: none;
   box-shadow: 0 7px 14px rgba(43, 43, 83, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   transform: translateY(-0.78px);
+  font-weight: bold;
 }
 
 .btn:active,
@@ -1115,9 +1116,11 @@
 }
 
 a.btn {
-  color: rgb(255, 255, 255);  /*기존 btn 색깔*/
+  color: rgb(16, 36, 97);  /*기존 btn 색깔*/
   text-decoration: none;
   transition-duration: 0.3s;  /*색상 천천히 바뀌는 이유 */
+  font-weight: bold;
+
 }
 
 /* icon */
@@ -1181,7 +1184,7 @@ a.btn {
 }
 
 .nav-menu .btn:hover {
-  color: rgb(42, 152, 203);
+  color: rgb(27, 149, 206);
   text-decoration: none;
   box-shadow: 0 0 0 0;
   font-weight: 800;
