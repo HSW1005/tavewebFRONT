@@ -145,6 +145,12 @@ body, html {
    background-repeat: no-repeat;
    background-size: 100%;
 }
+
+.section1 .section2 .section3
+.section4 .section5 
+{
+   background-color: rgba(184, 86, 6, 0.15);
+}
         
 section div {
     font-family: 'Open Sans';
