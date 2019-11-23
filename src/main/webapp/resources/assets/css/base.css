@@ -1299,7 +1299,7 @@ a.btn3 {
 /*seil 사용*/
 /*새로운 navbar기능들(btn2)*/
 .btn2:hover {
-  color: rgb(0, 0, 0); /*버튼 바뀌는 색상*/
+  color: rgb(253, 132, 11);  /*버튼 바뀌는 색상*/
   text-decoration: none;
   box-shadow: 0 0 0 0;
   font-weight: bold;
@@ -1307,7 +1307,7 @@ a.btn3 {
 
 
 a.btn2 {
-  color: rgb(128, 128, 128);  /*기존 btn 색깔*/
+  color: rgb(248, 178, 108);  /*기존 btn 색깔*/
   text-decoration: none;
   transition-duration: 0.5s;  /*색상 천천히 바뀌는 이유 */
 }
