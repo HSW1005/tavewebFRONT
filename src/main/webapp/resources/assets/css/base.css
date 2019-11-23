@@ -1125,18 +1125,26 @@ a.btn {
 
 /*btn3 : for index*/
 a.btn3 {
-  color: #009EB3;  /*기존 btn 색깔*/
+  color: rgb(43, 63, 107); /*기존 btn 색깔*/
+  /*color: rgb(0, 0, 0);*/
   text-decoration: none;
   transition-duration: 0.3s;  /*색상 천천히 바뀌는 이유 */
-  font-weight: bold;
+  font-weight: 900;
 
 }
 
+.btn3:hover {
+  color: rgb(27, 149, 206); /*버튼 바뀌는 색상*/
+  text-decoration: none;
+  box-shadow: 0 0 0 0;
+  font-weight: 900;
+  
+}
 .btn3 {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: center;
@@ -1154,12 +1162,6 @@ a.btn3 {
   border-radius: 4px;
 }
 
-.btn3:hover {
-  color: rgb(0, 0, 0); /*버튼 바뀌는 색상*/
-  text-decoration: none;
-  box-shadow: 0 0 0 0;
-  font-weight: bold;
-}
 
 /* icon */
 .fa {

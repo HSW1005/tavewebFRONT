@@ -167,7 +167,8 @@ section div {
 .content {
    position: fixed;
    bottom: 0;
-   background: rgba(0, 0, 0, 0.5);
+   /*주황색*/background: rgba(184, 86, 6, 0.15);
+   
    color: #f1f1f1;
    width: 100%;
    padding: 20px;
