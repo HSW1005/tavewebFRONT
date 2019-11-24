@@ -92,7 +92,7 @@
 
 </head>
 
-<body style="overflow: auto;">
+<body style="overflow: auto; background-color: #fffbf8;">
 
     <!-- navbar -->
     <nav class="navbar_etc">
@@ -101,10 +101,10 @@
             <div style="align-items: center; line-height: 1px;">
                 <a href="index.html" class="logobtn ml-5"
                     style="align-content: left; font-size:40px; text-decoration: none; vertical-align: middle;">
-                    <img class="navbar-brand-img" src="../../resources/assets/img/Libre_b.png"></a>
+                    <img class="navbar-brand-img" src="../../resources/assets/img/Libre_3.png"></a>
             </div>
 
-            <div class="nav-menu col-9" style="text-align:right; align-items:center;">
+            <div class="nav-menu col-9" style="text-align:right; align-items: center;">
 
                 <a href="about.html" class="btn2 ml-8">ABOUT</a>
                 <a href="recruit.html" class="btn2 ml-6">RECRUIT</a>
@@ -143,8 +143,7 @@
                         <h4 class="ml-2 rec-sub">이름</h4>
                         <div class="form-group">
                             <div class="input-group input-group-alternative">
-                                <input class="form-control" type="text" placeholder="name" name="name" id="name"
-                                    required>
+                                <input class="form-control" type="text" placeholder="name" name="name" id="name">
                             </div>
                         </div>
 
@@ -154,7 +153,7 @@
 
                             <div class="input-group input-group-alternative">
                                 <input class="form-control" type="text" placeholder="phone number" name="phone"
-                                    id="phone" required>
+                                    id="phone">
                             </div>
                         </div>
 
@@ -232,20 +231,6 @@
                 // When the user clicks on the button, open the modal 
                 btn.onclick = function () {
                     modal.style.display = "block";
-                }
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                    location.href = "./recruit.html"
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                        location.href = "./recruit.html"
-                    }
                 }
             </script>
         </c:when>
