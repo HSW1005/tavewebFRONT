@@ -1088,7 +1088,7 @@
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: rgb(42, 195, 203); /*버튼 바뀌는 색상*/
+  color: rgb(219, 131, 119); /*버튼 바뀌는 색상*/
   text-decoration: none;
   box-shadow: 0 7px 14px rgba(43, 43, 83, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   transform: translateY(-0.78px);
@@ -1216,19 +1216,6 @@ a.btn3 {
   display: flex;
   text-align: center;
   vertical-align: middle;
-}
-
-.navbar_etc .btn {
-  color: #232e52;
-  font-weight: 600;
-}
-
-.nav-menu .btn:hover {
-  color: rgb(27, 149, 206);
-  text-decoration: none;
-  box-shadow: 0 0 0 0;
-  font-weight: 800;
-  transform: translateY(-0.2px);
 }
 
 .nav-text {
