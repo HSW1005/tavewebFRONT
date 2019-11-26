@@ -42,6 +42,64 @@
             box-shadow: 0 1px 3px rgba(48, 57, 99, 0.15), 0 1px 0 rgba(0, 0, 0, .02);
             transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
         }
+
+        .modal {
+            display: none;
+            z-index: 50;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .modal-box {
+            background-color: #fefefe;
+            margin: 14% auto;
+            padding: 1.3rem;
+            border: 1px solid #888;
+            width: 32%;
+            border-radius: 0.9rem;
+            background: linear-gradient(87deg, #fb6340 0, #fbb140 100%) !important;
+            box-shadow: 0 0 2rem 0 rgba(31, 91, 160, 0.164);
+        }
+
+        .modal-content {
+            text-align: center;
+            padding: 4rem 1rem 1rem;
+            color: #fefefe;
+        }
+
+        .modal-title {
+            font-size: 17px;
+            font-weight: bolder;
+        }
+
+        .modal-explain {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .close {
+            color: #fefefe;
+            float: right;
+            vertical-align: top;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -125,8 +183,7 @@
                             <td colspan="2">
                                 <button class="btn btn-fill mt-3" onclick="javascript:history.back(-1)"
                                     style="float: left;">목록으로</button>
-                                <!-- qnadelete page 미완 -->
-                                <button class="btn btn-fill mt-3"
+                                <button id="btnDelete" class="btn btn-fill mt-3"
                                     style="float: right; margin-right: 0.3rem;">삭제</button>
                             </td>
                         </tr>
@@ -137,6 +194,53 @@
         </div>
     </div>
 
+    <div id="reconfirm" class="modal">
+        <div class="modal-box">
+            <div class="close">
+                &times;
+            </div>
+            <div class="modal-content">
+                <i class="fa fa-exclamation-triangle" style="font-size: 4.2rem;"></i>
+                <p class="modal-title">정말 삭제하시겠습니까?</p>
+                <p class="modal-explain">삭제 후 복원은 불가합니다</p>
+                <button id="realDelete" class="btn btn-modal" style="margin: 3rem auto 0;">네, 삭제하겠습니다</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var modal = document.getElementById('reconfirm');
+        var btn = document.getElementById("btnDelete");
+        var span = document.getElementsByClassName("close")[0];
+        var godelete = document.getElementById("realdelete");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        godelete.onclick = function () {
+            document.qnaview.action = "${path}/qnadelete/${notice_id}";
+            document.qnaview.submit;
+        }
+    </script>
+
+
+    <!-- go back page -->
+    <script type="text/javascript">
+        function historyback() {
+            history.back()
+        }
+    </script>
 
 </body>
 

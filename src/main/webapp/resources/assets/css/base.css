@@ -1115,6 +1115,17 @@
   filter: alpha(opacity=100);
 }
 
+.btn-modal {
+  color: rgb(243, 122, 42);
+  background-color: #FFFFFF ;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.btn-modal:hover {
+  color: rgb(243, 122, 42);
+}
+
 a.btn {
   color: rgb(255, 255, 255);  /*기존 btn 색깔*/
   text-decoration: none;

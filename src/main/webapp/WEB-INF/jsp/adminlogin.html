@@ -25,15 +25,11 @@
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 
     <style>
-        .aa {
-            background-image: url('../../resources/assets/img/3185087.jpg');
-        }
-
         .loginbox {
             width: 31%;
             margin: 3rem auto 3rem;
             background-color: #ffffff;
-            box-shadow: 0 0 2rem 0 rgba(23, 27, 32, 0.15);
+            box-shadow: 0 0 2rem 0 rgba(175, 117, 29, 0.164);
             border-radius: 1rem;
             padding: 3.8rem 3.3rem;
             text-align: center;
@@ -48,7 +44,7 @@
             font-size: 1.1rem;
             font-weight: 400;
             line-height: 1.5;
-            color: #294e68;
+            color: #441f06;
             text-align: center;
             white-space: nowrap;
             background-color: #fff;
@@ -117,33 +113,33 @@
 
 </head>
 
-<body class="aa" style="overflow: auto;">
+<body style="overflow: auto; background-color: #fffbf8;">
 
     <!-- navbar -->
-    <nav class="navbar">
+    <nav class="navbar_etc">
         <div class="container col-11">
 
             <div style="align-items: center; line-height: 1px;">
                 <a href="index.html" class="logobtn ml-5"
                     style="align-content: left; font-size:40px; text-decoration: none; vertical-align: middle;">
-                    <img class="navbar-brand-img" src="../../resources/assets/img/Libre_4.png"></a>
+                    <img class="navbar-brand-img" src="../../resources/assets/img/Libre_3.png"></a>
             </div>
 
             <div class="nav-menu col-9" style="text-align:right; align-items: center;">
 
-                <a href="about.html" class="btn3 ml-8">ABOUT</a>
-                <a href="recruit.html" class="btn3 ml-6">RECRUIT</a>
-                <a href="activity.html" class="btn3 ml-6">ACTIVITY</a>
-                <a href="qna.html" class="btn3 ml-6">Q&A</a>
+                <a href="about.html" class="btn2 ml-8">ABOUT</a>
+                <a href="recruit.html" class="btn2 ml-6">RECRUIT</a>
+                <a href="activity.html" class="btn2 ml-6">ACTIVITY</a>
+                <a href="qna.html" class="btn2 ml-6">Q&A</a>
 
                 <div class="container" style="align-items: center; line-height: 15px;">
-                    <a href=" http://fb.com/TechnologywaAVE" class="btn3" style="font-size: 20px;">
+                    <a href=" http://fb.com/TechnologywaAVE" class="btn2" style="font-size: 20px;">
                         <i class="fa fa-facebook-square"></i>
                     </a>
-                    <a href="http://blog.naver.com/t--ave" class="btn3" style="font-size: 20px;">
+                    <a href="http://blog.naver.com/t--ave" class="btn2" style="font-size: 20px;">
                         <i class="fa fa-globe"></i>
                     </a>
-                    <a href="http://fb.com/TechnologywaAVE" class="btn3" style="font-size: 20px;">
+                    <a href="http://fb.com/TechnologywaAVE" class="btn2" style="font-size: 20px;">
                         <i class="fa fa-comment"></i>
                     </a>
                 </div>
@@ -156,8 +152,8 @@
     <!-- content -->
     <div>
         <div class="container" style="padding-top: 2rem;">
-            <div class="loginbox mt-9">
-                <div style="color: #294e68;">
+            <div class="loginbox">
+                <div style="color: #441f06;">
 
                     <div>
                         <p style="margin: 0 auto 0.5rem; font-size: 1.5rem; font-weight: 660;">WELCOME!</p>
@@ -187,7 +183,7 @@
                         </div>
 
                         <button type="submit" value="submit" class="btn btn-fill" id="log_submit"
-                            style="padding: 0.5rem 1rem; font-size: 1rem; margin: 2.2rem auto 0; background-color: #294e68;">LOGIN</button>
+                            style="padding: 0.5rem 1rem; font-size: 1rem; margin: 2.2rem auto 0; background-color: #441f06;">LOGIN</button>
                     </form>
                 </div>
             </div>
@@ -216,7 +212,7 @@
                 var span = document.getElementsByClassName("close")[0];
 
                 if (isLogin == 'true') {
-                    $('#log-modal').show();
+                    $('#loginError').show();
 
                     span.onclick = function () {
                         modal.style.display = "none";
