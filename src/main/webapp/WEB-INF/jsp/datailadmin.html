@@ -1,0 +1,135 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TAVE</title>
+    <meta charset="UTF-8">
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="../../resources/assets/css/base.css">
+    <link rel="stylesheet" href="../../resources/assets/css/index.css">
+    <link rel="stylesheet" href="../../resources/assets/css/qna.css">
+    <link rel="stylesheet" href="../../resources/assets/css/recruit.css">
+    <link rel="stylesheet" href="../../resources/assets/css/materialize.min.css">
+
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- JS -->
+    <script src="../../resources/assets/js/dropdown.js"></script>
+    <script src="../../resources/assets/js/pageScroll.js"></script>
+    <script src="../../resources/assets/js/materialize.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="../../resources/assets/js/motion.js"></script>
+
+    <style>
+        .multi-line {
+            /* 높이 초기화 */
+            height: auto;
+            /* line-height 초기화 */
+            line-height: normal;
+            /* 여백 설정 */
+            padding: 0.8em 0.5em;
+            width: 100%;
+            word-wrap: break-word;
+            word-break: normal;
+        }
+    </style>
+
+</head>
+
+<body style="overflow: auto; background-color: #fffbf8;">
+
+    <!-- navbar -->
+    <nav class="navbar_etc">
+        <div class="container col-11">
+
+            <div style="align-items: center; line-height: 1px;">
+                <a href="index" class="logobtn ml-5"
+                    style="align-content: left; font-size:40px; text-decoration: none; vertical-align: middle;">
+                    <img class="navbar-brand-img" src="../../resources/assets/img/Libre_3.png"></a>
+            </div>
+
+            <div class="nav-menu col-9" style="text-align:right; align-items: center;">
+
+                <a href="about.html" class="btn2 ml-8">ABOUT</a>
+                <a href="recruit.html" class="btn2 ml-6">RECRUIT</a>
+                <a href="activity.html" class="btn2 ml-6">ACTIVITY</a>
+                <a href="qna.html" class="btn2 ml-6">Q&A</a>
+
+                <div class="container" style="align-items: center; line-height: 15px;">
+                    <a href=" http://fb.com/TechnologywaAVE" class="btn2" style="font-size: 20px;">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="http://blog.naver.com/t--ave" class="btn2" style="font-size: 20px;">
+                        <i class="fa fa-globe"></i>
+                    </a>
+                    <a href="http://fb.com/TechnologywaAVE" class="btn2" style="font-size: 20px;">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container">
+        <div class="contentbox">
+            <div class="border">
+
+                <p style="font-size: 21px; font-weight: bold; margin: 0 0.7rem 1rem;">#3</p>
+                <img src="../../resources/assets/img/line2.jpg" width="100%">
+
+                <div class="">
+                    <form name="detail-ybform" method="POST">
+
+                        <!-- 이름 -->
+                        <h4 class="ml-2 rec-sub">이름</h4>
+                        <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                                <input class="form-control" type="text" placeholder="name" name="board-name"
+                                    id="board-name" value="${board.name}">
+                            </div>
+                        </div>
+
+                        <!-- 전화번호 -->
+                        <h4 class="ml-2 rec-sub">전화번호</h4>
+                        <div class="form-group">
+
+                            <div class="input-group input-group-alternative">
+                                <input class="form-control" type="text" placeholder="phone number" name="board-phone"
+                                    id="board-phone" value="${board.phone}">
+                            </div>
+                        </div>
+
+                        <!-- 자기소개 -->
+                        <h4 class="ml-2 rec-sub">자기소개</h4>
+                        <div class="form-group">
+                            <textarea rows="4" class="form-control form-control-alternative" name="board-introduceMyself"
+                            id="board-introduceMyself">${board.introduceMyself}</textarea>
+                        </div>
+
+                        <!-- 지원동기 -->
+                        <h4 class="ml-2 rec-sub">지원동기</h4>
+                        <div class="form-group">
+                                <textarea rows="4" class="form-control form-control-alternative" name="board-motive"
+                                id="board-motive">${board.motive}</textarea>
+                        </div>
+
+                    </form>
+
+                    <div style="text-align: center;">
+                        <button class="btn btn-fill mt-5" onclick="location.href='adminview.html'">목록으로</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -81,7 +81,7 @@
 
         .modal-content {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 4rem 1rem 1rem;
             color: #fefefe;
         }
 
@@ -203,16 +203,27 @@
                         <p class="modal-title">로그인에 실패했습니다</p>
                         <p class="modal-explain">아이디와 비밀번호를 확인해주세요 :(
                         </p>
+                        <button id="ok" class="btn btn-modal" style="margin: 3rem auto 0;">확인</button>
                     </div>
                 </div>
             </div>
 
             <script type="text/javascript">
                 var isLogin = '${isLogin}';
+
+                var modal = document.getElementById('loginError');
+
                 var span = document.getElementsByClassName("close")[0];
 
+                var btn = document.getElementById("log_submit");
+
+                var ok = document.getElementById("ok");
+
                 if (isLogin == 'true') {
-                    $('#loginError').show();
+
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
 
                     span.onclick = function () {
                         modal.style.display = "none";
@@ -224,6 +235,10 @@
                             modal.style.display = "none";
                             location.href = "./adminlogin"
                         }
+                    }
+
+                    ok.onclick = function () {
+                        modal.style.display = "none";
                     }
                 }
             </script>

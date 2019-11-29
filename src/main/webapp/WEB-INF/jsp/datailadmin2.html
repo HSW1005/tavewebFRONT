@@ -1,5 +1,4 @@
-<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> -->
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
 
 <!DOCTYPE html>
 <html>
@@ -12,6 +11,7 @@
     <link rel="stylesheet" href="../../resources/assets/css/base.css">
     <link rel="stylesheet" href="../../resources/assets/css/index.css">
     <link rel="stylesheet" href="../../resources/assets/css/qna.css">
+    <link rel="stylesheet" href="../../resources/assets/css/recruit.css">
     <link rel="stylesheet" href="../../resources/assets/css/materialize.min.css">
 
     <!-- ICON -->
@@ -25,12 +25,6 @@
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="../../resources/assets/js/motion.js"></script>
 
-    <style>
-        .firstcol {
-            padding: 0;
-        }
-
-    </style>
 
 </head>
 
@@ -41,7 +35,7 @@
         <div class="container col-11">
 
             <div style="align-items: center; line-height: 1px;">
-                <a href="index.html" class="logobtn ml-5"
+                <a href="index" class="logobtn ml-5"
                     style="align-content: left; font-size:40px; text-decoration: none; vertical-align: middle;">
                     <img class="navbar-brand-img" src="../../resources/assets/img/Libre_3.png"></a>
             </div>
@@ -93,7 +87,8 @@
                     <tbody>
                         <tr>
                             <td>
-                                <p class="q-content" style="color: rgb(24, 24, 27); padding: 1.6rem 1.9rem;"
+                                <!-- 문의사항 출력할 공간 -->
+                                <p class="q-content" style="color: rgb(27, 25, 24); padding: 1.6rem 1.9rem;"
                                     align="left">
                                     테-하<br>
                                     이번주 세션 공지입니다~<br>
@@ -109,63 +104,39 @@
                             </td>
                         </tr>
 
-                        <tr>
-                            <td>
-                                <p class="comment-writer">운영진 | 2019-11-17 17:30</p>
-                                <p class="comment">구글폼 꼭 작성해주세요 ㅎㅅㅎ</p>
-                            </td>
-                        </tr>
+                        <!-- 답변 입력 -->
+                        <form role="form" name="addComment" method="POST" action="/addcomment">
+                            <tr>
+                                <td>
+                                    <div class="form-group" style="padding-right: 2rem;">
+                                        <textarea rows="4" class="form-control form-control-alternative"
+                                            placeholder="comment section" name="comment"></textarea>
+                                    </div>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td colspan="2">
-                                <button class="btn btn-fill mt-3" onclick="location.href='qna.html'"
-                                    style="float: left;">목록으로</button>
-                                <button id="btnDelete" class="btn btn-fill mt-3"
-                                    style="float: right; margin-right: 0.3rem;">삭제</button>
-                            </td>
-                        </tr>
+
+                            <tr>
+                                <td>
+                                    <button class="btn btn-fill mt-3" type="button" onclick="location.href='adminview.html'"
+                                        style="float: left;">목록으로</button>
+                                    <!-- 문의 사항에 답변 추가 -->
+                                    <button id="btnEdit" class="btn btn-fill mt-3" type="submit"
+                                        style="float: right; margin-right: 0.3rem;">수정</button>
+                                    <!-- 글 강제 삭제 권한? -->
+                                    <button id="btnDelete" type="button" class="btn btn-fill mt-3"
+                                        style="float: right; margin-right: 0.3rem;">삭제</button>
+                                </td>
+                            </tr>
+                            
+                        </form>
+                        
                     </tbody>
-
                 </table>
+
             </div>
         </div>
     </div>
-
-    <div id="reconfirm" class="modal">
-        <div class="modal-box">
-            <div class="close">
-                &times;
-            </div>
-            <div class="modal-content">
-                <i class="fa fa-exclamation-triangle" style="font-size: 4.2rem;"></i>
-                <p class="modal-title">정말 삭제하시겠습니까?</p>
-                <p class="modal-explain">삭제 후 복원은 불가합니다</p>
-                <button id="realDelete" class="btn btn-modal" style="margin: 3rem auto 0;">네, 삭제하겠습니다</button>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        var modal = document.getElementById('reconfirm');
-
-        var btn = document.getElementById("btnDelete");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        var godelete = document.getElementById("realDelete");
-
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        godelete.onclick = function () {
-            location.href = "${path}/qnadelete/${notice_id}";
-        }
-    </script>
 
 </body>
 
