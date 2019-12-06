@@ -27,8 +27,14 @@
             background-color: rgba(218, 212, 205, 0.123);
         }
 
+        .input-group {
+            transition: all 0.15s ease;
+            box-shadow: none;
+        }
+
         .pagination {
             display: flex;
+            float: left;
             padding-left: 0;
             list-style: none;
             border-radius: 0.375rem;
@@ -143,27 +149,19 @@
     <!-- content -->
     <div class="container">
         <div class="tablebox">
-            <div class="border">
+            <div class="border" style="text-align: center;">
 
                 <div>
                     <h2 style="text-align: center; font-weight: 800; margin: 0 auto 3rem;">Q & A</h2>
                 </div>
 
-                <!-- 검색기능 (미완)
                 <div class="form-group">
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-4">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            <span class="input-group-text"><i class="fa fa-folder-open"></i></span>
                         </div>
                         <input class="form-control" placeholder="Search" type="text">
-                      </div>
-                </div>
-                 -->
-
-                <div style="text-align: right; margin-right: 1rem;">
-                    <form method="GET" action="/qna/qnawrite" accept-charset="UTF-8">
-                        <input type="submit" class="btn btn-fill mb-3" value="글쓰기">
-                    </form>
+                    </div>
                 </div>
 
                 <table class="table">
@@ -231,10 +229,11 @@
 
                 </table>
 
-                <nav>
-                    <ul class="pagination" style="margin: 2rem auto; text-align: center;">
+                <!-- 페이징처리
+                <nav style="display: inline-block; text-align: center;">
+                    <ul class="pagination" style="margin: 1.5rem auto; text-align: center">
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
+                            <a class="page-link" href="" aria-label="Previous">
                                 <i class="fa fa-angle-left"></i>
                                 <span class="sr-only">Previous</span>
                             </a>
@@ -245,15 +244,20 @@
                         <li class="page-item"><a class="page-link" href="#">4</a></li>
                         <li class="page-item"><a class="page-link" href="#">5</a></li>
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
+                            <a class="page-link" href="" aria-label="Next">
                                 <i class="fa fa-angle-right"></i>
                                 <span class="sr-only">Next</span>
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
 
 
+                <div style="text-align: center; margin-right: 1rem;">
+                    <form method="GET" action="/qna/qnawrite" accept-charset="UTF-8">
+                        <input type="submit" class="btn btn-fill mb-3" value="글쓰기">
+                    </form>
+                </div>
 
             </div>
         </div>
