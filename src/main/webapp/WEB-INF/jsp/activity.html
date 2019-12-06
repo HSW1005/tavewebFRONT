@@ -8,12 +8,15 @@
     <title>TAVE</title>
     <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- CSS FILE -->
     <link rel="stylesheet" href="../../resources/assets/css/base.css">
     <link rel="stylesheet" href="../../resources/assets/css/index.css">
-    <link rel="stylesheet" href="../../resources/assets/css/activity.css">
     <link rel="stylesheet" href="../../resources/assets/css/qna.css">
     <link rel="stylesheet" href="../../resources/assets/css/materialize.min.css">
+    <link rel="stylesheet" href="../../resources/assets/css/newactivity.css">
 
     <!-- ICON -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,10 +28,16 @@
 
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="../../resources/assets/js/motion.js"></script>
+    <script src="../../resources/assets/js/activity.js"></script>
 
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
 </head>
 
-<body style="overflow: auto; background-color: #fffbf8;">
+<body style="background-color: #fffbf8;">
 
     <!-- navbar -->
     <nav class="navbar_etc">
@@ -60,60 +69,189 @@
                 </div>
 
             </div>
-
         </div>
     </nav>
 
+
     <!-- content -->
-    <div class="container" style="height: 100%;">
-        <div class="ac-back" style="padding: 4rem 0 0 0;">
+    <div class="container" style="width: 100%; margin-top: 3%">
+        <div class="container_act" style="float:left; margin-left: 4%; margin-right:3px">
+            <img src="../../resources/assets/img/OT.jpg" alt="Avatar" class="image">
+            <div class="overlay" id="overlay_mtot" style="cursor:pointer">
+                <div class="text">MT / OT</div>
+            </div>
+        </div>
 
-            <ul>
-                <li>
-                    <span class="title">MT&OT</span>
-                    <a href="#img_1">
-                        <img class="ac-photo" src="../../resources/assets/img/OT.jpg" />
-                    </a>
-                </li>
+        <div class="container_act" style="float:left; margin-left: 3px; margin-right:3px">
+            <img src="../../resources/assets/img/정기세션.jpg" alt="Avatar" class="image">
+            <div class="overlay" id="overlay_session" style="cursor:pointer">
+                <div class="text">정기세션</div>
+            </div>
+        </div>
 
-                <li>
-                    <span class="title">정기세션</span>
-                    <a href="#img_2">
-                        <img class="ac-photo" src="../../resources/assets/img/정기세션.jpg" />
-                    </a>
-                </li>
+        <div class="container_act" style="float:left; margin-left: 3px; margin-right:3px">
+            <img src="../../resources/assets/img/테마피크닉.jpg" alt="Avatar" class="image">
+            <div class="overlay" id="overlay_picnic" style="cursor:pointer">
+                <div class="text">테마피크닉</div>
+            </div>
+        </div>
 
-                <li>
-                    <span class="title">테마피크닉</span>
-                    <a href="#img_3">
-                        <img class="ac-photo" src="../../resources/assets/img/테마피크닉.jpg" />
-                    </a>
-                </li>
+        <div class="container_act" style="float:left; margin-left: 3px; margin-right:3px">
+            <img src="../../resources/assets/img/뒤풀이.jpg" alt="Avatar" class="image">
+            <div class="overlay" id="overlay_afterparty" style="cursor:pointer">
+                <div class="text">뒤풀이</div>
+            </div>
+        </div>
 
-                <li>
-                    <span class="title">뒷풀이</span>
-                    <a href="#img_4">
-                        <img class="ac-photo" src="../../resources/assets/img/뒤풀이.jpg" />
-                    </a>
-                </li>
-
-                <li>
-                    <span class="title">컨퍼런스</span>
-                    <a href="#img_5">
-                        <img class="ac-photo" src="../../resources/assets/img/컨퍼런스.jpg" />
-                    </a>
-                </li>
-            </ul>
-
-            <a href="#_1" class="lightbox trans" id="img_1"><img src="../../resources/assets/img/OT.jpg"></a>
-            <a href="#_2" class="lightbox trans" id="img_2"><img src="../../resources/assets/img/정기세션.jpg"></a>
-            <a href="#_3" class="lightbox trans" id="img_3"><img src="../../resources/assets/img/테마피크닉.jpg"></a>
-            <a href="#_4" class="lightbox trans" id="img_4"><img src="../../resources/assets/img/뒤풀이.jpg"></a>
-            <a href="#_5" class="lightbox trans" id="img_5"><img src="../../resources/assets/img/컨퍼런스.jpg"></a>
-
+        <div class="container_act" style="float:left; margin-left: 3px; margin-right:3px">
+            <img src="../../resources/assets/img/about3.jpg" style="height: 100%;" alt="Avatar" class="image">
+            <div class="overlay" id="overlay_conference" style="cursor:pointer">
+                <div class="text">컨퍼런스</div>
+            </div>
         </div>
     </div>
 
+    <!---------------------------------------------------------------------------------------------------------->
+
+    <!-- 모달창 -->
+    <div id="myModal_act" class="modal_act">
+
+        <!-- MT/ OT 모달창 -->
+        <div class="modal-content" style="margin-top:5%">
+            <span class="close_act" style="margin-right: 23%;">&times;</span>
+            <div>
+                <div class="w3-content w3-display-container" style="width: 800px; height: 500px; border-color: black;">
+                    <img class="mySlides" src="../../resources/assets/img/OT.jpg" style="width:100%; height:100%">
+                    <img class="mySlides" src="../../resources/assets/img/mtot1.jpg" style="width:100%; height:100%">
+                    <img class="mySlides" src="../../resources/assets/img/mtot2.jpg" style="width:100%; height:100%">
+
+                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // MT & OT 팝업
+        var modal = document.getElementById('myModal_act');
+        var btn = document.getElementById("overlay_mtot");
+        var span = document.getElementsByClassName("close_act")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // 정기세션 팝업
+        var modal = document.getElementById('myModal_act');
+        var btn = document.getElementById("overlay_session");
+        var span = document.getElementsByClassName("close_act");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = window.close();
+            }
+        }
+
+        // 테마피크닉 팝업
+        var modal = document.getElementById('myModal_act');
+        var btn = document.getElementById("overlay_picnic");
+        var span = document.getElementsByClassName("close_act");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // 뒤풀이 팝업
+        var modal = document.getElementById('myModal_act');
+        var btn = document.getElementById("overlay_afterparty");
+        var span = document.getElementsByClassName("close_act");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // 컨퍼런스 팝업
+        var modal = document.getElementById('myModal_act');
+        var btn = document.getElementById("overlay_conference");
+        var span = document.getElementsByClassName("close_act");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
